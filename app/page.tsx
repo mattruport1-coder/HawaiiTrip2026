@@ -174,7 +174,7 @@ const days = [
 
 const styles = {
   page: {
-    background: "linear-gradient(180deg, #e0f2fe 0%, #ffffff 22%, #fff7ed 100%)",
+    background: "linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover",
     minHeight: "100vh",
     color: "#0f172a",
     fontFamily: "Arial, Helvetica, sans-serif",
