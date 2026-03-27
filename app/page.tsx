@@ -714,12 +714,12 @@ export default function Page() {
           <div className="hero-grid">
             <div>
               <div className="pills">
-                <span className="pill">Matt&apos;s Hawaii Trip</span>
+                <span className="pill">Cohen&apos;s Hawaii Grad Trip</span>
                 <span className="pill">Surfjack HQ</span>
                 <span className="pill">2 Vans</span>
               </div>
 
-              <h1>Hawaii Trip HQ</h1>
+              <h1>Hawaii Grad Trip HQ</h1>
 
               <p className="lead">
                 Your beachy, practical, one-stop trip page for plans, maps,
