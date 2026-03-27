@@ -1,7 +1,7 @@
 const snorkel = [
   "Cynthia",
-  "Ruby Ruport",
-  "Lindsay Ruport",
+  "Ruby",
+  "Lindsay",
   "Chuck",
   "Marisa",
   "Ana",
@@ -20,8 +20,8 @@ const snorkel = [
 ];
 
 const brewery = [
-  "Ruby Ruport",
-  "Lindsay Ruport",
+  "Ruby",
+  "Lindsay",
   "Marisa",
   "Meggan",
   "JD",
@@ -44,7 +44,7 @@ const brewery = [
 
 const luau = [
   "Cynthia",
-  "Ruby Ruport",
+  "Ruby",
   "Blythe",
   "Chuck",
   "Marisa",
@@ -124,8 +124,6 @@ export default function Page() {
           --teal:#0f766e;
           --gold:#f59e0b;
           --sand:#fff7ed;
-          --pink:#fff1f2;
-          --mint:#ecfeff;
         }
 
         * { box-sizing: border-box; }
@@ -138,6 +136,14 @@ export default function Page() {
             radial-gradient(circle at top left, rgba(34,197,94,.10), transparent 24%),
             radial-gradient(circle at top right, rgba(249,115,22,.14), transparent 20%),
             linear-gradient(180deg, #dff4ff 0%, #ffffff 28%, #fff7ed 100%);
+        }
+
+        a {
+          color: inherit;
+        }
+
+        .page {
+          min-height: 100vh;
         }
 
         .container {
@@ -220,7 +226,8 @@ export default function Page() {
         .btn-teal:hover,
         .link-card:hover,
         .stop-card:hover,
-        .day-card:hover {
+        .day-card:hover,
+        .calendar-card:hover {
           transform: translateY(-2px);
         }
 
@@ -361,6 +368,52 @@ export default function Page() {
           color: var(--muted);
           font-size: 15px;
           line-height: 1.8;
+        }
+
+        .calendar-grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 16px;
+          margin-top: 20px;
+        }
+
+        .calendar-card {
+          background: white;
+          border: 1px solid var(--line);
+          border-radius: 24px;
+          padding: 20px;
+          box-shadow: 0 6px 18px rgba(15,23,42,.04);
+        }
+
+        .calendar-day {
+          font-size: 12px;
+          font-weight: 700;
+          letter-spacing: .14em;
+          text-transform: uppercase;
+          color: #0369a1;
+          margin-bottom: 10px;
+        }
+
+        .calendar-card h3 {
+          margin: 0 0 10px;
+          font-size: 24px;
+          line-height: 1.15;
+        }
+
+        .calendar-card ul {
+          margin: 0;
+          padding-left: 18px;
+          color: #475569;
+          line-height: 1.8;
+          font-size: 14px;
+        }
+
+        .highlight-yellow {
+          background: linear-gradient(180deg, #fef9c3 0%, #ffffff 100%);
+        }
+
+        .highlight-green {
+          background: linear-gradient(180deg, #dcfce7 0%, #ffffff 100%);
         }
 
         .day-card {
@@ -616,7 +669,8 @@ export default function Page() {
           .attendance-grid,
           .rules-grid,
           .bullet-grid,
-          .link-grid {
+          .link-grid,
+          .calendar-grid {
             grid-template-columns: 1fr;
           }
           .stats {
@@ -648,7 +702,8 @@ export default function Page() {
           .hero-card,
           .attendance-card,
           .info-card,
-          .rules {
+          .rules,
+          .calendar-card {
             padding: 18px;
           }
         }
@@ -672,11 +727,11 @@ export default function Page() {
               </p>
 
               <div className="button-row">
-                <a href="#itinerary" className="btn">
-                  View itinerary
+                <a href="#calendar" className="btn">
+                  Trip at a glance
                 </a>
-                <a href="#friday-route" className="btn-light">
-                  Friday island route
+                <a href="#itinerary" className="btn-light">
+                  Full itinerary
                 </a>
               </div>
 
@@ -731,6 +786,90 @@ export default function Page() {
                   Open hotel website
                 </a>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="calendar" className="section">
+        <div className="container">
+          <div className="kicker">Trip at a Glance</div>
+          <h2>Quick calendar view</h2>
+          <p className="subtitle">
+            A simple visual overview of the trip before the full itinerary and logistics below.
+          </p>
+
+          <div className="calendar-grid">
+            <div className="calendar-card">
+              <div className="calendar-day">Thursday · May 14</div>
+              <h3>Arrival Day</h3>
+              <ul>
+                <li>Flight arrival</li>
+                <li>Explore Waikiki</li>
+                <li>Hotel check-in</li>
+                <li>Cocktail hour</li>
+                <li>Poolside catered dinner</li>
+                <li>Bar hop Waikiki</li>
+              </ul>
+            </div>
+
+            <div className="calendar-card">
+              <div className="calendar-day">Friday · May 15</div>
+              <h3>Island Tour + Fireworks</h3>
+              <ul>
+                <li>Early birds</li>
+                <li>Depart for island tour ~9:00 AM</li>
+                <li>Return ~4:00 PM</li>
+                <li>Free time</li>
+                <li>7:45 PM Waikiki fireworks</li>
+                <li>Dinner nearby / late crew</li>
+              </ul>
+            </div>
+
+            <div className="calendar-card highlight-yellow">
+              <div className="calendar-day">Saturday · May 16</div>
+              <h3>Graduation + Beach Party</h3>
+              <ul>
+                <li>Early breakfast</li>
+                <li>Leave 7:30 AM for graduation</li>
+                <li>9:00 AM commencement</li>
+                <li>Return to hotel</li>
+                <li>Leave for beach at 2:00 PM</li>
+                <li>Grad party on the beach</li>
+              </ul>
+            </div>
+
+            <div className="calendar-card highlight-green">
+              <div className="calendar-day">Sunday · May 17</div>
+              <h3>Snorkel + Brewery Day</h3>
+              <ul>
+                <li>Leave Surfjack at 9:45 AM</li>
+                <li>Arrive before 10:15 AM</li>
+                <li>Three Tiki Sailing snorkel cruise</li>
+                <li>Free time after</li>
+                <li>Dinner / optional brewery night</li>
+              </ul>
+            </div>
+
+            <div className="calendar-card">
+              <div className="calendar-day">Monday · May 18</div>
+              <h3>Flex Day + Luau</h3>
+              <ul>
+                <li>Free time / beach / excursion</li>
+                <li>Optional luau planning</li>
+                <li>Browse and book an excursion</li>
+                <li>Easy group dinner or luau</li>
+              </ul>
+            </div>
+
+            <div className="calendar-card">
+              <div className="calendar-day">Tuesday · May 19</div>
+              <h3>Departure Day</h3>
+              <ul>
+                <li>Hugs & kisses</li>
+                <li>Airport runs</li>
+                <li>Depart for flights</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -1045,7 +1184,7 @@ export default function Page() {
         <div className="container">
           <div className="split-grid">
             <div>
-              <div className="kicker">Links</div>
+              <div className="kicker">Essential Links</div>
               <h2>Quick opens</h2>
               <p className="subtitle">
                 Fast links for places people will actually need during the trip.
@@ -1102,7 +1241,154 @@ export default function Page() {
                   ))}
                 </ul>
               </div>
+
+              <div className="info-card">
+                <h3>Recommended restaurants</h3>
+                <ul>
+                  <li>
+                    <a href="https://paiafishmarket.com/menu/" target="_blank" rel="noreferrer">
+                      Paia Fish Market
+                    </a>{" "}
+                    — casual, fresh seafood, great for groups
+                  </li>
+                  <li>
+                    <a href="https://www.marugameudon.com/?olonwp=JjBtp_vMLk25gkYh_bnoiQ" target="_blank" rel="noreferrer">
+                      Marugame Udon
+                    </a>{" "}
+                    — iconic, affordable, always solid
+                  </li>
+                  <li>
+                    <a href="https://www.dukeslanehawaii.com/" target="_blank" rel="noreferrer">
+                      Duke&apos;s Lane Market & Eatery
+                    </a>{" "}
+                    — central, easy, flexible for groups
+                  </li>
+                  <li>
+                    <a href="https://kfoodus.com/" target="_blank" rel="noreferrer">
+                      K Food
+                    </a>{" "}
+                    — casual Korean option
+                  </li>
+                  <li>
+                    <a href="https://waikikifoodhall.com/" target="_blank" rel="noreferrer">
+                      Waikiki Food Hall
+                    </a>{" "}
+                    — great when everyone wants something different
+                  </li>
+                </ul>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="kicker">Optional Adventures</div>
+          <h2>Explore More</h2>
+          <p className="subtitle">
+            Extra options for flex time, low-key exploring, and anyone who wants to do a little more.
+          </p>
+
+          <div className="link-grid">
+            <a
+              className="link-card"
+              href="https://www.tripadvisor.com/Attraction_Review-g60982-d104662-Reviews-Pearl_Harbor_National_Memorial-Honolulu_Oahu_Hawaii.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Pearl Harbor
+            </a>
+
+            <a
+              className="link-card"
+              href="https://www.tripadvisor.com/Attraction_Review-g60982-d107673-Reviews-Diamond_Head_State_Monument-Honolulu_Oahu_Hawaii.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Hike Diamond Head
+            </a>
+
+            <a
+              className="link-card"
+              href="https://www.tripadvisor.com/Attraction_Review-g60982-d561035-Reviews-Manoa_Falls-Honolulu_Oahu_Hawaii.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Hike Manoa Falls
+            </a>
+
+            <a
+              className="link-card"
+              href="https://www.tripadvisor.com/Attraction_Review-g60982-d131980-Reviews-Iolani_Palace-Honolulu_Oahu_Hawaii.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Iolani Palace
+            </a>
+
+            <a
+              className="link-card"
+              href="https://www.tripadvisor.com/AttractionProductReview-g29222-d23961237-Kualoa_Ranch_Jurassic_Adventure_Tour-Oahu_Hawaii.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Kualoa Ranch Jurassic Tour
+            </a>
+
+            <a
+              className="link-card"
+              href="https://www.tripadvisor.com/Attraction_Review-g60982-d131986-Reviews-Bishop_Museum-Honolulu_Oahu_Hawaii.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Bishop Museum
+            </a>
+
+            <a
+              className="link-card"
+              href="https://www.tripadvisor.com/Attraction_Review-g60653-d107578-Reviews-Honolulu_Botanical_Gardens-Kaneohe_Oahu_Hawaii.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Honolulu Botanical Gardens
+            </a>
+
+            <a
+              className="link-card"
+              href="https://www.tripadvisor.com/Attraction_Review-g60659-d105817-Reviews-Dole_Plantation-Wahiawa_Oahu_Hawaii.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Dole Plantation
+            </a>
+
+            <a
+              className="link-card"
+              href="https://www.tripadvisor.com/Attraction_Review-g29222-d207512-Reviews-North_Shore-Oahu_Hawaii.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              North Shore
+            </a>
+
+            <a
+              className="link-card"
+              href="https://www.tripadvisor.com/Attraction_Review-g60647-d146822-Reviews-Waimea_Bay-Haleiwa_Oahu_Hawaii.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Waimea Bay
+            </a>
+
+            <a
+              className="link-card"
+              href="https://www.tripadvisor.com/Attraction_Review-g60982-d254540-Reviews-Waikiki_Beach-Honolulu_Oahu_Hawaii.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Waikiki Beach
+            </a>
           </div>
         </div>
       </section>
