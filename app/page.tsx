@@ -807,8 +807,8 @@ export default function Page() {
                 <li>Flight arrival</li>
                 <li>Explore Waikiki</li>
                 <li>Hotel check-in</li>
-                <li>Cocktail hour</li>
-                <li>Poolside catered dinner</li>
+                <li>Cocktail hour at hotel 4:30pm</li>
+                <li>Walk to casual dinner</li>
                 <li>Bar hop Waikiki</li>
               </ul>
             </div>
@@ -897,7 +897,7 @@ export default function Page() {
 
               <div className="bullet-grid">
                 <div className="bullet">Check in at The Surfjack Hotel &amp; Swim Club</div>
-                <div className="bullet">Use the vans once everyone is in place</div>
+                <div className="bullet">Poolside Meet and Greet and Happy Hour</div>
                 <div className="bullet">Casual Waikiki hang</div>
                 <div className="bullet">No heavy structure tonight</div>
               </div>
@@ -905,8 +905,9 @@ export default function Page() {
               <div className="logistics">
                 <div className="kicker">Logistics</div>
                 <ul>
-                  <li>Main rally point: Surfjack</li>
-                  <li>Loose meetup around 6:00–7:00 PM</li>
+                  <li>Text Matt your flight info</li>
+                  <li>Andrea & Matt will shuttle you from airport</li>
+                  <li>Hotel Happy Hour 4:30PM</li>
                   <li>Light first night, keep it easy</li>
                 </ul>
                 <div className="logistics-links">
