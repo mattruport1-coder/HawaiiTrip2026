@@ -805,7 +805,7 @@ export default function Page() {
               <h3>Arrival Day</h3>
               <ul>
                 <li>Flight arrival</li>
-                <li>Explore Waikiki</li>
+                <li>Shuttle Service from airport</li>
                 <li>Hotel check-in</li>
                 <li>Cocktail hour at hotel 4:30pm</li>
                 <li>Walk to casual dinner</li>
