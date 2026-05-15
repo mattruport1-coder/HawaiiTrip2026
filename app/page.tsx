@@ -831,10 +831,10 @@ export default function Page() {
               <h3>Graduation + Beach Party</h3>
               <ul>
                 <li>Early breakfast</li>
-                <li>Leave 7:30 AM for graduation</li>
+                <li>Leave 7:00 AM for graduation</li>
                 <li>9:00 AM commencement</li>
                 <li>Return to hotel</li>
-                <li>Leave for beach at 2:00 PM</li>
+                <li>Leave for beach at 1:30 PM</li>
                 <li>Grad party on the beach</li>
               </ul>
             </div>
@@ -928,7 +928,7 @@ export default function Page() {
             <div>
               <div className="day-label">Friday</div>
               <div className="day-time">
-                Leave Surfjack: 8:30 AM • Fireworks: 7:45 PM
+                Leave Surfjack: 9:00 AM • Fireworks: 7:45 PM
               </div>
             </div>
             <div>
@@ -950,9 +950,9 @@ export default function Page() {
               <div className="logistics">
                 <div className="kicker">Logistics</div>
                 <ul>
-                  <li>Be downstairs and ready by 8:20 AM</li>
-                  <li>Both vans roll at 8:30 AM</li>
-                  <li>Bring water, sunscreen, towel, and a change of clothes</li>
+                  <li>Be downstairs and ready by 8:50 AM</li>
+                  <li>Both vans roll at 9:00 AM</li>
+                  <li>Bring bathing suit, sunscreen, towel, and a change of clothes</li>
                 </ul>
                 <div className="logistics-links">
                   <a
@@ -991,9 +991,10 @@ export default function Page() {
               <div className="logistics">
                 <div className="kicker">Logistics</div>
                 <ul>
-                  <li>Leave early for graduation parking and traffic</li>
+                  <li>Leave at 7am for graduation parking and traffic</li>
+                  <li>Wear comfortable shoes for long walk into stadium</li>
                   <li>Beach crew target arrival: 2:00 PM</li>
-                  <li>Bring towels, drinks, snacks, and a speaker</li>
+                  <li>Bring towels, sunblock, and a speaker</li>
                 </ul>
                 <div className="logistics-links">
                   <a
